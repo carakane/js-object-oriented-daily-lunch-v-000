@@ -22,6 +22,7 @@ class Customer {
   }
 
   totalSpent() {
+    debugger
     return(this.meals().reduce(function(sum, value) {
       return (sum + value.price)
     }, 0))
