@@ -80,7 +80,7 @@ class Employer {
 
    deliveries() {
      let arr = this.employees().map(employee => employee.id);
-     return(arr.map(empDel => store.deliveries.find(delivery => delivery.id === empDel)))
+     return(arr.map(employeeDelivery => store.deliveries.find(delivery => delivery.id === employeeDelivery)))
    }
 
    meals() {
