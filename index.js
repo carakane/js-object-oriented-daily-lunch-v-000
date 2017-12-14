@@ -89,6 +89,7 @@ class Employer {
    }
 
    mealTotals() {
+     console.log(this.deliveries())
      let arr = this.deliveries().map(delivery => delivery.meal());
      let mealCount = {};
      arr.forEach(function(i) {
