@@ -89,17 +89,25 @@ class Employer {
    }
 
    mealTotals() {
-     let arr = this.deliveries().map(delivery => delivery.meal());
-     let mealCount = {};
-     arr.forEach(function(i) {
-      mealCount[i.id] = (mealCount[i.id]||0) + 1;});
-      console.log(mealCount)
-   return(mealCount);
-  //   //  let counter = {}
-  //   //  arr.forEach(function(obj) {
-  //   //    var key = JSON.stringify(obj)
-  //   //    counter[key] = (counter[key] || 0) + 1
-  //   //  })
-  //   // return(counter)
-  }
+  //    let arr = this.deliveries().map(delivery => delivery.meal());
+  //    let mealCount = {};
+  //    arr.forEach(function(i) {
+  //     mealCount[i.id] = (mealCount[i.id]||0) + 1;});
+  //     console.log(mealCount)
+  //  return(mealCount);
+
+
+   let allMeals = this.deliveries().map(delivery => {
+     return delivery.meal();
+   });
+   let summaryObject = {};
+   allMeals.forEach(function(meal) {
+     summaryObject[meal.id] = 0;
+   });
+   allMeals.forEach(function(meal) {
+     summaryObject[meal.id] += 1;
+   });
+   return summaryObject;
+
+    }
 }
