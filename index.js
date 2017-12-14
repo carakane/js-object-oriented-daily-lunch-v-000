@@ -101,7 +101,8 @@ class Employer {
   //   //    counter[key] = (counter[key] || 0) + 1
   //   //  })
   //   // return(counter)
-  console.log(let arr = this.employees())
+  let arr = this.employees()
+  console.log(arr)
   console.log(arr.map(employee => employee.totalSpent()))
   // console.log(this.employees())
   // let x = this.employees().map(employee => employee.id)
