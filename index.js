@@ -102,15 +102,15 @@ class Employer {
   //   //    counter[key] = (counter[key] || 0) + 1
   //   //  })
   //   // return(counter)
-  debugger
-  console.log(this.employees())
-  let x = this.employees().map(employee => employee.id)
-  console.log(x)
-  let y = x.map(employee => employee.totalSpent())
-  console.log(this.employees().map(employee => employee.totalSpent()))
-  console.log(y)
-  let z = y.reduce((sum, value) => sum + value)
-  console.log(z)
+  console.log(this.employees().forEach(employee => employee.totalSpent()))
+  // console.log(this.employees())
+  // let x = this.employees().map(employee => employee.id)
+  // console.log(x)
+  // let y = x.map(employee => employee.totalSpent())
+  // console.log(this.employees().map(employee => employee.totalSpent()))
+  // console.log(y)
+  // let z = y.reduce((sum, value) => sum + value)
+  // console.log(z)
 
     // employee.totalSpent()))
    }
