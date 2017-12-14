@@ -82,12 +82,17 @@ class Employer {
     //  let arr = this.employees().map(employee => employee.id);
     //  console.log(arr.map(employeeDelivery => store.deliveries.find(delivery => delivery.id === employeeDelivery)))
 
-    let allDeliveries = this.employees().map(employee => {
-      return employee.deliveries();
-    });
-    let merged = [].concat.apply([], allDeliveries);
-    console.log(merged)
-    return merged;
+
+    let arr = [];
+    this.employees().map(employee => arr.push(employee.deliveries()))
+    return(arr)
+
+    // let allDeliveries = this.employees().map(employee => {
+    //   return employee.deliveries();
+    // });
+    // let merged = [].concat.apply([], allDeliveries);
+    // console.log(merged)
+    // return merged;
    }
 
    meals() {
