@@ -103,7 +103,7 @@ class Employer {
   //   // return(counter)
   let arr = this.employees()
   console.log(arr)
-  console.log(arr[0].deliveries())
+  console.log(arr[0].totalSpent().bind(this))
 
   console.log(arr.map(employee => employee.totalSpent()))
   // console.log(this.employees())
