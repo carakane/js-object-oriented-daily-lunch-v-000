@@ -22,7 +22,6 @@ class Customer {
   }
 
   totalSpent() {
-    debugger
     return(this.meals().reduce(function(sum, value) {
       return (sum + value.price)
     }, 0))
@@ -102,7 +101,7 @@ class Employer {
   //   //    counter[key] = (counter[key] || 0) + 1
   //   //  })
   //   // return(counter)
-  console.log(this.employees().forEach(employee => employee.totalSpent()))
+  console.log(this.employees().map(employee => employee.totalSpent()))
   // console.log(this.employees())
   // let x = this.employees().map(employee => employee.id)
   // console.log(x)
