@@ -85,7 +85,15 @@ class Employer {
 
     let arr = [];
     this.employees().map(employee => arr.push(employee.deliveries()))
-    console.log(arr.flatten)
+    arr.reduce((a, b) => a.concat(b), [])
+    console.log(arr)
+
+//     var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+//   function(a, b) {
+//     return a.concat(b);
+//   },
+//   []
+// );
 
     // let allDeliveries = this.employees().map(employee => {
     //   return employee.deliveries();
