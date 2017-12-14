@@ -79,27 +79,9 @@ class Employer {
   }
 
    deliveries() {
-    //  let arr = this.employees().map(employee => employee.id);
-    //  console.log(arr.map(employeeDelivery => store.deliveries.find(delivery => delivery.id === employeeDelivery)))
-
-
     let arr = [];
     this.employees().map(employee => arr.push(employee.deliveries()))
     return(arr.reduce((a, b) => a.concat(b), []))
-
-//     var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-//   function(a, b) {
-//     return a.concat(b);
-//   },
-//   []
-// );
-
-    // let allDeliveries = this.employees().map(employee => {
-    //   return employee.deliveries();
-    // });
-    // let merged = [].concat.apply([], allDeliveries);
-    // console.log(merged)
-    // return merged;
    }
 
    meals() {
