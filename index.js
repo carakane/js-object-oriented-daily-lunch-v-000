@@ -93,7 +93,7 @@ class Employer {
      let mealCount = {};
      arr.forEach(function(i) {
       mealCount[i.id] = (mealCount[i.id]||0) + 1;});
-  //     console.log(mealCount)
+      console.log(mealCount)
    return(mealCount);
   //   //  let counter = {}
   //   //  arr.forEach(function(obj) {
