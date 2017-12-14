@@ -85,7 +85,7 @@ class Employer {
 
     let arr = [];
     this.employees().map(employee => arr.push(employee.deliveries()))
-    console.log(arr)
+    console.log(arr.flatten)
 
     // let allDeliveries = this.employees().map(employee => {
     //   return employee.deliveries();
